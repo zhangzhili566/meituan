@@ -1,0 +1,46 @@
+//标签边框
+@mixin border-fix($color:#000,$raduis:0){
+    position: relative;
+    &::after{
+        content:"";
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 1px solid $color;
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: 0 0;
+        border-radius: $raduis;
+    }
+}
+//评论区边框
+@mixin border-top-1px($color:#000,$raduis:0){
+    position: relative;
+    &::after{
+        display: block;
+        content:"";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border-top: 1px solid $color;
+        transform: scale(0.5);
+        
+    }
+}
+//商家页边框
+@mixin border-bottom-1px($color:#000,$raduis:0){
+    position: relative;
+    &::after{
+        display: block;
+        content:"";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid $color;
+        transform: scale(0.5);
+        
+    }
+}
